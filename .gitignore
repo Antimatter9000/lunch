@@ -1,1 +1,5 @@
-**/.DS_Store
+bower_components/
+package-lock.json
+node_modules/
+spec/
+build/

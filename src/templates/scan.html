@@ -1,0 +1,35 @@
+<div ng-controller="BarcodeController as barcode">
+
+  <!-- <dm-quagga-reader type="ean" on-processed="barcode.onProcessed(result)" on-detected="barcode.onDetected(result)" /> -->
+
+  <div ng-if="product">
+  	<dl>
+	  <dt>Product</dt>
+	  <dd>{{product.item_name}}</dd>
+
+	  <dt>Brand Name</dt>
+	  <dd>{{product.brand_name}}</dd>
+
+	  <dt>Item Description</dt>
+	  <dd>{{product.item_description}}</dd>
+	  
+	  <dt>Calories</dt>
+	  <dd>{{product.nf_calories}}</dd>
+
+	  <dt>Total Fat</dt>
+	  <dd>{{product.nf_total_fat}}</dd>
+
+	  <dt>Carbohydrates</dt>
+	  <dd>{{product.nf_total_carbohydrate}}</dd>
+
+	  <dt>Sugars</dt>
+	  <dd>{{product.nf_sugars}}</dd>
+
+	  <dt>Sodium</dt>
+	  <dd>{{product.nf_sodium}}</dd>
+
+	</dl>
+  	
+  </div>
+
+</div>
