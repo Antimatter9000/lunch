@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const shipitLunch = angular.module('shipitLunch', ['ngRoute', 'nix.api', 'angular-quagga-js']);
+  const shipitLunch = angular.module('shipitLunch', ['ngRoute', 'nix.api']);
 
   shipitLunch.constant('NUTRITIONIX_API_BASE', 'https://api.nutritionix.com/v1_1/');
   shipitLunch.constant('NUTRITIONIX_APP_ID', 'e84cc355');

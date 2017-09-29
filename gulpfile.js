@@ -50,11 +50,9 @@ gulp.task('scripts', () => {
     'src/lib/js/angular.min.js',
     'src/lib/js/angular-route.min.js',
     'src/lib/js/angular-nutritionix-api.min.js',
-    'src/lib/js/angular-quagga-js.js',
     'src/js/app.js',
     'src/js/services/NutritionixService.js',
     'src/js/controllers/BarcodeController.js',
-    'src/js/components/barcodeScanner.js',
     'src/js/quagga.js'
   ])
     .pipe(eslint())
