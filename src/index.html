@@ -6,11 +6,11 @@
     <title>Barcode Scanner &amp; Nutritionix API Service</title>
     <meta name="description" content="Barcode Scanner &amp; Nutritionix API Service"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/1.0.0-beta.2/quagga.js"></script>
     <link rel="stylesheet" href="css/application.min.css"/>
   </head>
   <body>
-    <div id="wrapper" class="container-fluid">
+    <div id="wrapper" class="container-fluid" ng-controller="BarcodeController as barcode">
       <!-- Header & navigation -->
       <header>
         <h1>Scan</h1>
@@ -21,7 +21,18 @@
           <!-- Render templates -->
         </div>
       </main>
+
+      <form ng-submit="barcode.loadNutritionalValues()">
+        <div class="input-field">
+          <label for="isbn_input">Barcode:</label>
+          <input id="isbn_input" ng-model="upc" class="isbn" type="text" />
+          <button type="button" class="icon-barcode button scan">Scan</button>
+          <input type="submit" value="Get Nutritional Values" />
+        </div>
+      </form>
+
     </div>
+
     <script src="js/application.min.js"></script>
     <script src="js/templates.min.js"></script>
   </body>

@@ -1,16 +1,7 @@
 <div ng-controller="BarcodeController as barcode">
 
-  <dm-quagga-reader type="ean" on-processed="barcode.onProcessed(result)" on-detected="barcode.onDetected(result)" />
+  <!-- <dm-quagga-reader type="ean" on-processed="barcode.onProcessed(result)" on-detected="barcode.onDetected(result)" /> -->
 
-  <form ng-submit="barcode.loadNutritionalValues()">
-    <div class="input-field">
-        <label for="upc_input">Barcode:</label>
-        <input id="upc_input" class="upc" ng-model="upc" type="text" />
-        <button type="button" class="icon-barcode button scan">Scan</button>
-        <input type="submit" value="Submit" />
-    </div>
-  </form>
-  
   <div ng-if="product">
   	<dl>
 	  <dt>Product</dt>

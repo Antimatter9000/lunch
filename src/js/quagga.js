@@ -2,13 +2,11 @@ var Quagga = window.Quagga;
 var App = {
     _scanner: null,
     init: function() {
-        console.log('Init', this)
         this.attachListeners();
     },
     activateScanner: function() {
         var scanner = this.configureScanner('.overlay__content'),
             onDetected = function (result) {
-                console.log('Detected!')
                 document.querySelector('input.isbn').value = result.codeResult.code;
                 stop();
             }.bind(this),
@@ -23,10 +21,8 @@ var App = {
         scanner.addEventListener('detected', onDetected).start();
     },
     attachListeners: function() {
-        var self = this;
-        var button = window.document.querySelector('button');
-
-        console.log(button)
+        var self = this,
+            button = document.querySelector('.input-field input + button.scan');
 
         button.addEventListener("click", function onClick(e) {
             e.preventDefault();
@@ -66,12 +62,11 @@ var App = {
         }
     },
     configureScanner: function(selector) {
-        console.log('Configuring');
         if (!this._scanner) {
             this._scanner = Quagga
                 .decoder({readers: ['ean_reader']})
                 .locator({patchSize: 'medium'})
-                .fromVideo({
+                .fromSource({
                     target: selector,
                     constraints: {
                         width: 800,
@@ -80,7 +75,6 @@ var App = {
                     }
                 });
         }
-        console.log('Returning ', this._scanner);
         return this._scanner;
     }
 };
