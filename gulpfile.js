@@ -48,6 +48,7 @@ gulp.task('lint', () => {
 gulp.task('scripts', () => {
   return gulp.src([
     'src/lib/js/angular.min.js',
+    'src/lib/js/angular-route.min.js',
     'src/lib/js/angular-nutritionix-api.min.js',
     'src/lib/js/angular-quagga-js.js',
     'src/js/app.js',
