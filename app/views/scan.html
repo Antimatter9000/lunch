@@ -1,30 +1,64 @@
 <div class="jumbotron">
-    <h1>Scan Item</h1>
-    <br/>
+<div class="top-backgroun">
     <div class="row">
-      <div class="col-md-6">
-        <p>scanner bar here</p>      
-      </div>
-      <div class="col-md-6">
-            <p>Scanned Information</p>    
-            <p>Total creit to be added here</p>            
-          </div>
+        <dic class="col-md-6"></dic>
+        <dic class="col-md-6">
+            <h3 class="pull-right margin-right-small"><span>Credit Raised for Charity</span><span> X</span></h3>
+        </dic>
     </div>
-  </div>
 
-  <div class="jumbotron">
-        <div class="row">
-            <div class="col-md-8">
-                <p>user name</p>
-                <p>user total credit {{totalCreditOfItem}}</p>
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-success" ng-click="submit()">Submit</button>
-                <button type="button" class="btn btn-success" ng-click="reset()">Reset</button>
-            </div>
+    <div class="row">
+        <div class="col-md-6">
+            item image goes here
         </div>
+        <div class="col-md-6">
+            <h2>{{item.name}}</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th>Nutrition</th>
+                    <th>Amount</th>
+                    <th>KMC</th>
+                    </tr>
+                </thead>
+                <tbody>          
+                    <tr ng-repeat="element in item.nutrition">
+                        <td>{{element.nutrition }}</td>
+                        <td>{{element.amount }}</td>
+                        <td>{{element.KMC }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table>
+            <thead>
+                    <tr>
+                    <th></th>
+                    <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>TOTAL</td>
+                    <td>{{totalKMC}}</td>
+                </tbody>
+            </table>
+            <hr>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="bottom-background">
+    <div class="row" style="position: relative">
+        <div class="col-md-8">
+            <h3>User Name here</h3>
+            <h3>Total Credits: {{}}</h3>
+        </div>
+        <div class="col-md-4 align-bottom" style="position: absolute; bottom:0; right: 0">
+            <button type="button" class="btn btn-success" ng-click="submit()">Submit</button>
+            <button type="button" class="btn btn-success" ng-click="reset()">Reset</button>                
+        </div>
+    </div>
 
-        <div class="alert alert-success" ng-show="scanSuccess === true" role="alert">Well done! You successfully scanned an item.</div>
-        <div class="alert alert-danger" ng-show="scanSuccess === false" role="alert">Oh snap! Change a few things up and try submitting again.</div>
-  </div>
-  
+    
+ </div>
+</div>

@@ -9,9 +9,5 @@
  */
 angular.module('lunchApp')
   .controller('ProfileCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
   });
