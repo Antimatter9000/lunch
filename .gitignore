@@ -2,4 +2,8 @@ bower_components/
 package-lock.json
 node_modules/
 spec/
+<<<<<<< HEAD
 build/
+=======
+build/
+>>>>>>> a52df9d9d8bb35d17252ef0d3a2cf16bc99cd407
