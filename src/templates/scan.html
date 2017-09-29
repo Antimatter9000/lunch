@@ -1,0 +1,43 @@
+<div ng-controller="BarcodeController as barcode">
+
+  <dm-quagga-reader type="ean" on-processed="barcode.onProcessed(result)" on-detected="barcode.onDetected(result)" />
+
+  <form ng-submit="barcode.loadNutritionalValues()">
+    <div class="input-field">
+        <label for="upc_input">Barcode:</label>
+        <input id="upc_input" class="upc" ng-model="upc" type="text" />
+        <button type="button" class="icon-barcode button scan">Scan</button>
+        <input type="submit" value="Submit" />
+    </div>
+  </form>
+  <div ng-if="product">
+  	<dl>
+	  <dt>Product</dt>
+	  <dd>{{product.item_name}}</dd>
+
+	  <dt>Brand Name</dt>
+	  <dd>{{product.brand_name}}</dd>
+
+	  <dt>Item Description</dt>
+	  <dd>{{product.item_description}}</dd>
+	  
+	  <dt>Calories</dt>
+	  <dd>{{product.nf_calories}}</dd>
+
+	  <dt>Total Fat</dt>
+	  <dd>{{product.nf_total_fat}}</dd>
+
+	  <dt>Carbohydrates</dt>
+	  <dd>{{product.nf_total_carbohydrate}}</dd>
+
+	  <dt>Sugars</dt>
+	  <dd>{{product.nf_sugars}}</dd>
+
+	  <dt>Sodium</dt>
+	  <dd>{{product.nf_sodium}}</dd>
+
+	</dl>
+  	
+  </div>
+
+</div>

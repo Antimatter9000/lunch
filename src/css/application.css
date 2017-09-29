@@ -1,0 +1,54 @@
+@media screen {
+
+  body {
+    font-family: Georgia, serif;
+    font-size: 17px;
+  }
+
+  h1, h2 {
+    margin-bottom: 30px;
+    color: #337ab7;
+  }
+
+  #wrapper {
+    background: #fff;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    margin: 30px auto 0 auto;
+    padding: 20px;
+    width: 75%;
+    min-height: 600px;
+  }
+
+  #clients {
+    margin-bottom: 50px;
+  }
+
+  #sales-container {
+    padding: 10px;
+    background: lightblue;
+  }
+
+  /* Hightlight the currently selected client */
+  .table>tbody>tr.active>td {
+    color: #fff;
+    background-color: #336699 !important;
+  }
+
+  .table>tbody>tr.active>td>button {
+    color: #333;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  #wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+  }
+
+}
