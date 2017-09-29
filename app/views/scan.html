@@ -1,0 +1,30 @@
+<div class="jumbotron">
+    <h1>Scan Item</h1>
+    <br/>
+    <div class="row">
+      <div class="col-md-6">
+        <p>scanner bar here</p>      
+      </div>
+      <div class="col-md-6">
+            <p>Scanned Information</p>    
+            <p>Total creit to be added here</p>            
+          </div>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-8">
+                <p>user name</p>
+                <p>user total credit {{totalCreditOfItem}}</p>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-success" ng-click="submit()">Submit</button>
+                <button type="button" class="btn btn-success" ng-click="reset()">Reset</button>
+            </div>
+        </div>
+
+        <div class="alert alert-success" ng-show="scanSuccess === true" role="alert">Well done! You successfully scanned an item.</div>
+        <div class="alert alert-danger" ng-show="scanSuccess === false" role="alert">Oh snap! Change a few things up and try submitting again.</div>
+  </div>
+  
