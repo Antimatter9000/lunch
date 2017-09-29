@@ -81,3 +81,36 @@ body {
     border-bottom: 0;
   }
 }
+
+body {
+  /* color: white; */
+  background-image: url('https://pixabay.com/get/e830b00c29f5033ed1534705fb0938c9bd22ffd41cb117479df8c57fa2/zucchini-1513112_1920.jpg');
+}
+
+.padding-left-10 {
+  padding-left: 10px; 
+}
+
+.bold-font{
+  font-weight: 600;
+}
+
+.margin-right-small {
+  margin-right: 20px;
+}
+
+.top-background{
+  background-color: #6ECF6E";
+}
+.bottom-background{
+  background-color: #386838";
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > i {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      
+  }
+}
