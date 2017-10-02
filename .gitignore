@@ -1,3 +1,5 @@
+**/.DS_Store
+**/npm-debug*
 bower_components/
 package-lock.json
 node_modules/
